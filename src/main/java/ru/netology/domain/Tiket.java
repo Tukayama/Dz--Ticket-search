@@ -16,6 +16,6 @@ public class Tiket implements Comparable<Tiket> {
 
     @Override
     public int compareTo(Tiket o) {
-        return 0;
+        return (int) (price -o.price );
     }
 }

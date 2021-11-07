@@ -10,7 +10,7 @@ class ManagerTest {
     private Manager manager = new Manager();
     private Tiket tik1 = new Tiket(1, 1299, "SVO", "KZN", 95);
     private Tiket tik2 = new Tiket(2, 2940, "DME", "SIP", 155);
-    private Tiket tik3 = new Tiket(4, 2199, "VKO", "VOG", 95);
+    private Tiket tik3 = new Tiket(3, 2199, "VKO", "VOG", 95);
 
     @BeforeEach
     public void list() {
@@ -39,6 +39,15 @@ class ManagerTest {
         Tiket[] actual = manager.search("", "");
         assertArrayEquals(expented, actual);
     }
-}
+
+
+    @Test
+    void searchFrom() {
+        Tiket[] expented = new Tiket[]{};
+        Tiket[] actual = manager.search("SIP","VKO" );
+        assertArrayEquals(expented, actual);
+    }
+    }
+
 
 
