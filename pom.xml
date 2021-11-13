@@ -30,13 +30,13 @@
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
-                        <phase>initialize</phase>
+<!--                        <phase>initialize</phase>-->
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
                     </execution>
                     <execution>
-                        <id>report112</id>
+                        <id>report</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>report</goal>
@@ -47,12 +47,12 @@
                         <configuration>
                             <rules>
                                 <rule>
-                                    <element>BUNDLE</element>
+<!--                                    <element>BUNDLE</element>-->
                                     <limits>
                                         <limit>
-                                            <counter>BRANCH</counter>
+                                            <counter>LINE</counter>
                                             <value>COVEREDRATIO</value>
-                                            <minimum>1.0</minimum>
+                                            <minimum>100%</minimum>
                                         </limit>
                                     </limits>
                                 </rule>
@@ -74,7 +74,7 @@
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
-            <version>5.4.2</version>
+            <version>5.8.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
